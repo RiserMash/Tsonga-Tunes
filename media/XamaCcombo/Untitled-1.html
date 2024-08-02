@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Xigaza Unified</title>
+    <link rel="stylesheet" href="C:\Users\supri\Downloads\project drafts\Xigaza Unified\css\style.css">
+    <link rel="stylesheet" href="C:\Users\supri\Downloads\project drafts\Xigaza Unified\css\fontawesome.min.css">
+    <link rel="stylesheet" href="C:\Users\supri\Downloads\project drafts\Xigaza Unified\css\all.min.css">
+    <style>
+        body {
+            background-color: rgb(25, 4, 63);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="circle">
+                    <ul class="sidebar">
+                        <li><i class="fa-solid fa-plus"></i>Add to playlist</li>
+                        <li><i class="fa-solid fa-user"></i> Artist</li>
+                        <li><i class="fa-solid fa-download"></i> Download</li>
+                        <li><i class="fa-regular fa-heart"></i> Like</li>
+                        <li><i class="fa-solid fa-ellipsis-vertical"></i> List</li>
+                        <li><i class="fa-regular fa-file-lines"></i> Lyrics</li>
+                        <li><i class="fa-solid fa-share-nodes"></i> Share</li>
+                    </ul>
+                    <div class="menu-icon" onclick="showSidebar()"><i class="fa-solid fa-bars"></i></div>
+                </div>
+            </nav>
+            <img src="Thumbnail.png" class="song-img">
+            <h1 id="songTitle">Mhana Vafana</h1>
+            <p>XamaCcombo</p>
+            <audio autoplay id="song">
+                <source src="Original Mhana Vafana/Mhana Vafana.mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" value="0" id="progress">
+
+            <div class="vol">
+                <div onclick="mute()"><i class="fa-solid fa-volume-xmark" id="ctrlmute"></i></div>
+                <input type="range" value="50" min="0" max="100" id="vol">
+            </div>
+            
+            <div class="controls">
+                <div><i class="fa-solid fa-shuffle"></i></div>
+                <div onclick="previous()"><i class="fa-solid fa-backward"></i></div>
+                <div onclick="playPause()"><i class="fa-solid fa-pause" id="ctrlIcon"></i></div>
+                <div onclick="next()"><i class="fa-solid fa-forward"></i></div>
+                <div><i class="fa-solid fa-repeat"></i></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let progress = document.getElementById("progress");
+        let song = document.getElementById("song");
+        let ctrlIcon = document.getElementById("ctrlIcon");
+        let volume = document.getElementById("vol");
+        let ctrlmute = document.getElementById("ctrlmute");
+        let songTitle = document.getElementById("songTitle")
+        let songs = [
+        { src: "Original Mhana Vafana/Mhana Vafana.mp3", name: "Mhana Vafana" },
+        { src: "Original Mhana Vafana/Ta Humesa.mp3", name: "Ta Humesa" },
+        { src: "Original Mhana Vafana/Nwa Maringani.mp3", name: "Nwa Maringani" },
+        { src: "Original Mhana Vafana/Mhayivava.mp3", name: "Mhayivava" },
+        { src: "Original Mhana Vafana/Sheshageza Gijima.mp3", name: "Sheshageza Gijima" },
+        { src: "Original Mhana Vafana/Mhana Nwananga.mp3", name: "Mhana Nwananga" },
+        { src: "Original Mhana Vafana/Le Mvhumayileni.mp3", name: "Le Mvhumayileni" },
+        { src: "Original Mhana Vafana/Iwhawha Papa Fana.mp3", name: "Iwhawha Papa Fana" },
+        { src: "Original Mhana Vafana/Vantswelani.mp3", name: "Vantswelani" },
+        { src: "Original Mhana Vafana/Dzumba Na Mina.mp3", name: "Dzumba Na Mina" },
+        { src: "Original Mhana Vafana/Seku Fike Tingwenya.mp3", name: "Seku Fike Tingwenya" },
+        { src: "Original Mhana Vafana/Swelengende.mp3", name: "Swelengende" },
+        { src: "Original Mhana Vafana/Swilo Swa Dlaya.mp3", name: "Swilo Swa Dlaya" },
+        { src: "Original Mhana Vafana/Mhana Vafana Remix.mp3", name: "Mhana Vafana Remix" },
+        ];
+        let currentIndex = 0;
+        
+        function updateSong() {
+            song.src = songs[currentIndex].src;
+            songTitle.textContent = songs[currentIndex].name;
+            song.play();
+            ctrlIcon.classList.add("fa-pause");
+            ctrlIcon.classList.remove("fa-play");
+            console.log("Now playing:", songs[currentIndex].name);
+        }
+
+        song.addEventListener("loadedmetadata", function() {
+            progress.max = song.duration;
+        });
+
+        song.addEventListener("timeupdate", function() {
+            progress.value = song.currentTime;
+        });
+
+        function playPause() {
+            if (ctrlIcon.classList.contains("fa-pause")) {
+                song.pause();
+                ctrlIcon.classList.remove("fa-pause");
+                ctrlIcon.classList.add("fa-play");
+            } else {
+                song.play();
+                ctrlIcon.classList.add("fa-pause");
+                ctrlIcon.classList.remove("fa-play");
+            }
+        }
+
+        song.addEventListener('play', function() {
+            progressUpdateInterval = setInterval(() => {
+                progress.value = song.currentTime;
+            }, 500);
+        });
+
+        song.addEventListener('pause', function() {
+            clearInterval(progressUpdateInterval);
+        });
+
+        progress.oninput = function() {
+            song.currentTime = progress.value;
+            if (song.paused) {
+                song.play();
+                ctrlIcon.classList.add("fa-pause");
+                ctrlIcon.classList.remove("fa-play");
+            }
+        }
+
+        volume.oninput = function() {
+            song.volume = volume.value / 100;
+        }
+
+        function mute() {
+            if (ctrlmute.classList.contains("fa-volume-xmark")) {
+                song.muted = true;
+                ctrlmute.classList.remove("fa-volume-xmark");
+                ctrlmute.classList.add("fa-volume-high");
+            } else {
+                song.muted = false;
+                ctrlmute.classList.add("fa-volume-xmark");
+                ctrlmute.classList.remove("fa-volume-high");
+            }
+        }
+
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        function next() {
+            currentIndex = (currentIndex + 1) % songs.length;
+            song.src = songs[currentIndex];
+            song.play();
+            ctrlIcon.classList.add("fa-pause");
+            ctrlIcon.classList.remove("fa-play");
+            console.log("Now playing:", songs[currentIndex]);
+        }
+
+        function previous() {
+            currentIndex = (currentIndex - 1) % songs.length;
+            song.src = songs[currentIndex];
+            song.play();
+            ctrlIcon.classList.add("fa-pause");
+            ctrlIcon.classList.remove("fa-play");
+            console.log("Now playing:", songs[currentIndex]);
+        }
+
+        // Set initial song
+        song.src = songs[currentIndex];
+        console.log("Starting song:", songs[currentIndex]);
+    </script>    
+</body>
+</html>
