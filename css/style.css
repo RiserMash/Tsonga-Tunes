@@ -354,3 +354,43 @@ ul {
         width: 400px;
     }
 }
+
+@media (min-width: 1182px) and (max-width: 1182px) {
+    .container {
+        padding: 0 5%;
+    }
+
+    .music-player {
+        width: 90%;
+        padding: 2rem;
+    }
+
+    .song-img {
+        max-width: 200px;
+    }
+
+    .music-player h1 {
+        font-size: 1.5rem;
+    }
+
+    .music-player p {
+        font-size: 1rem;
+    }
+
+    #progress {
+        width: 80%;
+    }
+
+    #vol {
+        width: 80%;
+    }
+
+    .controls div, .vol div {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .sidebar {
+        width: 20rem;
+    }
+}
