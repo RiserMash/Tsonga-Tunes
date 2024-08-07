@@ -199,15 +199,15 @@ ul {
     }
 
     .song-img {
-        width: 150px;
+        width: 300px; /* 150px*/
     }
 
     .music-player h1 {
-        font-size: 18px;
+        font-size: 36px; /* 18px*/
     }
 
     .music-player p {
-        font-size: 12px;
+        font-size: 24px; /* 12px*/
     }
 
     #progress {
@@ -229,14 +229,14 @@ ul {
     }
 
     .controls div, .vol div {
-        width: 50px;
-        height: 50px;
-        margin: 10px;
+        width: 100px; /* 50px*/
+        height: 100px; /* 50px*/
+        margin: 20px; /* 10px*/
     }
 
     .sidebar {
         width: 250px;
-        right: 10px;
+        right: 0px; /* 10px*/
     }
 }
 /* For Small Devices (Max Width 430px) */
@@ -256,15 +256,15 @@ ul {
     }
 
     .song-img {
-        width: 150px;
+        width: 300px; /* 150px*/
     }
 
     .music-player h1 {
-        font-size: 18px;
+        font-size: 36px; /* 18px*/
     }
 
     .music-player p {
-        font-size: 12px;
+        font-size: 24px; /* 12px*/
     }
 
     #progress {
@@ -272,8 +272,8 @@ ul {
     }
 
     #progress::-webkit-slider-thumb {
-        width: 25px;
-        height: 25px;
+        width: 50px; /* 25px*/
+        height: 50px; /* 25px*/
     }
 
     #vol {
@@ -281,19 +281,19 @@ ul {
     }
 
     #vol::-webkit-slider-thumb {
-        width: 25px;
-        height: 25px;
+        width: 50px; /* 25px*/
+        height: 50px; /* 25px*/
     }
 
     .controls div, .vol div {
-        width: 50px;
-        height: 50px;
-        margin: 10px;
+        width: 100px; /* 50px*/
+        height: 100px; /* 50px*/
+        margin: 20px; /* 50px*/
     }
 
     .sidebar {
         width: 250px;
-        right: 10px;
+        right: 0px;
     }
 }
 
