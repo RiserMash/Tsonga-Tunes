@@ -66,11 +66,11 @@ nav .circle {
 #progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     background: rgb(25, 4, 63);
-    width: 90px; /*30px*/
-    height: 90px; /*30px*/
-    border-radius: 150%;
-    border: 32px solid #fff; /*8px*/
-    box-shadow: 0 15px 15px rgba(255, 26, 26, 0.22); /*0 5px 5px*/
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
 }
 
 .controls {
@@ -80,16 +80,16 @@ nav .circle {
 }
 
 .controls div {
-    width: 180px; /*60px*/
-    height: 180px; /*60px*/
-    margin: 60px; /*200px*/
+    width: 60px;
+    height: 60px;
+    margin: 20px;
     background: #fff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 150%;
+    border-radius: 50%;
     color: rgb(25, 4, 63);
-    box-shadow: 0 30px 60px rgba(255, 26, 26, 0.22); /* 0 10px 20px*/
+    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
     cursor: pointer;
 }
 
@@ -101,20 +101,20 @@ nav .circle {
 
 #vol {
     -webkit-appearance: none;
-    width: 150%;
-    height: 9px; /*3px*/
+    width: 50%;
+    height: 3px;
     background: rgb(25, 4, 63);
     border-radius: 4px;
     cursor: pointer;
-    margin: 120px 0; /*40px*/
+    margin: 40px 0;
 }
 
 #vol::-webkit-slider-thumb {
     -webkit-appearance: none;
     background: rgb(25, 4, 63);
-    width: 90px; /*30px*/
-    height: 90px; /*30px*/
-    border-radius: 150%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
     border: 8px solid #fff;
     box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
 }
@@ -123,20 +123,20 @@ nav .circle {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15px; /*2px*/
+    margin: 5px;
 }
 
 .vol div {
-    width: 90px; /*30px*/
-    height: 90px; /*30px*/
-    margin: 60px; /*30px*/
+    width: 30px;
+    height: 30px;
+    margin: 20px;
     background: #fff;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 150%;
+    border-radius: 50%;
     color: rgb(25, 4, 63);
-    box-shadow: 0 30px 60px rgba(255, 26, 26, 0.22); /*0 10px 20px*/
+    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
     cursor: pointer;
 }
 
