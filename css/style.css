@@ -183,9 +183,8 @@ ul {
     margin-right: 10px;
 }
 
-/* Responsive Styles for Max Width 360px */
+//* Responsive Styles for Max Width 320px */
 @media (max-width: 320px) {
-    
     .container {
         width: 100%;
         height: 100vh;
@@ -194,7 +193,7 @@ ul {
     .music-player {
         width: 100vw;
         height: 100vh; /* Full height */
-        padding: 10px;
+        padding: 30px; /* Increase padding */
         box-sizing: border-box;
         overflow: auto; /* Allow scrolling if needed */
     }
@@ -240,9 +239,9 @@ ul {
         right: 10px;
     }
 }
+
 /* For Small Devices (Max Width 430px) */
 @media (max-width: 430px) {
-    
     .container {
         width: 100%;
         height: 100vh;
@@ -251,7 +250,7 @@ ul {
     .music-player {
         width: 100vw;
         height: 100vh; /* Full height */
-        padding: 10px;
+        padding: 30px; /* Increase padding */
         box-sizing: border-box;
         overflow: auto; /* Allow scrolling if needed */
     }
@@ -297,6 +296,7 @@ ul {
         right: 10px;
     }
 }
+
 
 /* For Medium Devices (Max Width 768px) */
 @media (max-width: 768px) {
