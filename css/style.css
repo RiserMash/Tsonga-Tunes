@@ -183,7 +183,7 @@ ul {
     margin-right: 10px;
 }
 
-//* Responsive Styles for Max Width 320px */
+/* Responsive Styles for Max Width 320px */
 @media (max-width: 320px) {
     .container {
         width: 100%;
@@ -191,6 +191,8 @@ ul {
     }
 
     .music-player {
+        background-color: rgb(25, 4, 63);
+        margin-top: 50%;
         width: 100vw;
         height: 100vh; /* Full height */
         padding: 30px; /* Increase padding */
@@ -248,6 +250,8 @@ ul {
     }
 
     .music-player {
+        background-color: rgb(25, 4, 63);
+        margin-top: 50%;
         width: 100vw;
         height: 100vh; /* Full height */
         padding: 30px; /* Increase padding */
