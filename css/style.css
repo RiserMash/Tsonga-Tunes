@@ -193,21 +193,21 @@ ul {
     .music-player {
         width: 100vw;
         height: 100vh; /* Full height */
-        padding: 10px;
+        padding: 40px; /* 10PX*/
         box-sizing: border-box;
         overflow: auto; /* Allow scrolling if needed */
     }
 
     .song-img {
-        width: 300px; /* 150px*/
+        width: 600px; /* 150px*/
     }
 
     .music-player h1 {
-        font-size: 36px; /* 18px*/
+        font-size: 72px; /* 18px*/
     }
 
     .music-player p {
-        font-size: 24px; /* 12px*/
+        font-size: 48px; /* 12px*/
     }
 
     #progress {
@@ -215,8 +215,8 @@ ul {
     }
 
     #progress::-webkit-slider-thumb {
-        width: 25px;
-        height: 25px;
+        width: 100px; /* 25px*/
+        height: 100px; /* 25px*/
     }
 
     #vol {
@@ -224,14 +224,14 @@ ul {
     }
 
     #vol::-webkit-slider-thumb {
-        width: 25px;
-        height: 25px;
+        width: 100px; /* 25px*/
+        height: 100px; /* 25px*/
     }
 
     .controls div, .vol div {
-        width: 100px; /* 50px*/
-        height: 100px; /* 50px*/
-        margin: 20px; /* 10px*/
+        width: 200px; /* 50px*/
+        height: 200px; /* 50px*/
+        margin: 40px; /* 10px*/
     }
 
     .sidebar {
@@ -250,21 +250,21 @@ ul {
     .music-player {
         width: 100vw;
         height: 100vh; /* Full height */
-        padding: 10px;
+        padding: 40px; /* 10px*/
         box-sizing: border-box;
         overflow: auto; /* Allow scrolling if needed */
     }
 
     .song-img {
-        width: 300px; /* 150px*/
+        width: 600px; /* 150px*/
     }
 
     .music-player h1 {
-        font-size: 36px; /* 18px*/
+        font-size: 72px; /* 18px*/
     }
 
     .music-player p {
-        font-size: 24px; /* 12px*/
+        font-size: 48px; /* 12px*/
     }
 
     #progress {
@@ -272,8 +272,8 @@ ul {
     }
 
     #progress::-webkit-slider-thumb {
-        width: 50px; /* 25px*/
-        height: 50px; /* 25px*/
+        width: 100px; /* 25px*/
+        height: 100px; /* 25px*/
     }
 
     #vol {
@@ -281,14 +281,14 @@ ul {
     }
 
     #vol::-webkit-slider-thumb {
-        width: 50px; /* 25px*/
-        height: 50px; /* 25px*/
+        width: 100px; /* 25px*/
+        height: 100px; /* 25px*/
     }
 
     .controls div, .vol div {
-        width: 100px; /* 50px*/
-        height: 100px; /* 50px*/
-        margin: 20px; /* 50px*/
+        width: 200px; /* 50px*/
+        height: 200px; /* 50px*/
+        margin: 40px; /* 10px*/
     }
 
     .sidebar {
