@@ -1,5 +1,4 @@
 /* Base Styles (applied to all screen sizes) */
-
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +9,22 @@
 .container {
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column; /* To ensure music player takes up full height */
 }
 
 .music-player {
     background-color: rgb(230, 179, 12);
-    width: 100vw;
+    width: 100%;
+    flex-grow: 1; /* Allow music player to grow and take up available space */
     padding: 25px 35px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+
+
 }
 
 nav {
@@ -301,7 +309,6 @@ ul {
     }
 }
 
-
 /* For Medium Devices (Max Width 768px) */
 @media (max-width: 768px) {
     .container {
@@ -329,150 +336,6 @@ ul {
     }
 
     #progress {
-        width: 80%; /* Adjust width for medium devices */
-    }
-
-    #vol {
-        width: 80%; /* Adjust width for medium devices */
-    }
-
-    .controls div, .vol div {
-        width: 60px;
-        height: 60px;
-    }
-
-    .sidebar {
-        width: 300px;
-    }
-}
-
-/* For Large Devices (Min Width 1024px) */
-@media (min-width: 1024px) {
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        padding: 0 10%;
-    }
-
-
-    .music-player {
-        width: 600px;
-        padding: 30px;
-    }
-
-    .song-img {
-        width: 250px;
-    }
-
-    .music-player h1 {
-        font-size: 24px;
-    }
-
-    .music-player p {
-        font-size: 16px;
-    }
-
-    #progress {
-        width: 80%;
-    }
-
-    #vol {
-        width: 80%;
-    }
-
-    .controls div, .vol div {
-        width: 70px;
-        height: 70px;
-    }
-}
-
-/* For Extra Large Devices (Min Width 3840px - 4K) */
-@media (min-width: 3840px) {
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        padding: 0 5%;
-    }
-
-    .music-player {
-        width: 700px;
-        padding: 40px;
-    }
-
-    .song-img {
-        width: 300px;
-    }
-
-    .music-player h1 {
-        font-size: 28px;
-    }
-
-    .music-player p {
-        font-size: 18px;
-    }
-
-    #progress {
-        width: 80%;
-    }
-
-    #vol {
-        width: 80%;
-    }
-
-    .controls div, .vol div {
-        width: 80px;
-        height: 80px;
-    }
-
-    .sidebar {
-        width: 400px;
-    }
-}
-
-@media (min-width: 1182px) and (max-width: 1182px) {
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        padding: 0 5%;
-    }
-
-    .music-player {
-        width: 90%;
-        padding: 2rem;
-    }
-
-    .song-img {
-        max-width: 200px;
-    }
-
-    .music-player h1 {
-        font-size: 1.5rem;
-    }
-
-    .music-player p {
-        font-size: 1rem;
-    }
-
-    #progress {
-        width: 80%;
-    }
-
-    #vol {
-        width: 80%;
-    }
-
-    .controls div, .vol div {
-        width: 4rem;
-        height: 4rem;
-    }
-
-    .sidebar {
-        width: 20rem;
+        width: 80%; /* Adjust width for medium*/
     }
 }
