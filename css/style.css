@@ -9,8 +9,7 @@
 .container {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: column; /* To ensure music player takes up full height */
+     /* To ensure music player takes up full height */
 }
 
 .music-player {
@@ -194,6 +193,8 @@ ul {
     .container {
         width: 100vw;
         height: 100vh;
+        display: flex;
+    flex-direction: column;
     }
 
     .music-player {
@@ -251,6 +252,8 @@ ul {
     .container {
         width: 100%;
         height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     .music-player {
