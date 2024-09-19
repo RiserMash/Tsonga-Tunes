@@ -10,7 +10,7 @@ const artits = [
     },
     {
         Name:'Cinna Mpaka',
-        Link:'<a href="media/cinna mpaka/cinna mpaka.html"><img src="media/tiles/cinna mpaka.png"></a>'
+        Link:'<a href="media/Cinna Mpaka/Cinna Mpaka.html"><img src="media/tiles/cinna mpaka.png"></a>'
     },
     {
         Name:'Dj Gwinya',
