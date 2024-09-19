@@ -70,59 +70,179 @@ html{
         text-decoration: none; /* Remove underline */
         color: inherit; /* Use the color of the parent element */
     }
-/* Media Queries for Responsive Design */
-@media (max-width: 1200px) {
-    .container .music-container .box {
-        width: 45%;
-    }
-}
 
-@media (max-width: 768px) {
-    .container .heading {
-        font-size: 2.5rem;
-    }
-
-    .container .music-container .box {
-        width: 100%;
-        margin: 1rem 0;
+    .box {
+        height: 50px; /* Adjust height as needed */
+        display: flex;
+        cursor: pointer;
+        padding: 10px 20px;
+        background: rgb(25, 4, 63);
+        align-items: center;
+        box-shadow: 0 10px 25px rgb(230, 179, 12);
+        overflow: hidden; /* Ensures that no content overflows */
     }
 
-    .container .music-container h1 {
-        font-size: 1.8rem;
-        margin-left: 1rem;
+    .box a {
+        display: flex;
+        align-items: center; /* Vertically center items within the anchor */
+        width: 100%; /* Takes up the full width of the container */
+        text-decoration: none;
+        color: rgb(230, 179, 12); /* Color for text and icons */
     }
 
-    .container .music-container p {
-        font-size: 1.2rem;
-        margin-left: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .container .heading {
-        font-size: 2rem;
-        padding: 1rem;
+    .box a .fa-solid {
+        font-size: 20px; /* Adjust size if needed */
+        margin: 0 10px; /* Space between icons and text */
     }
 
-    .container .music-container .box {
-        height: auto; /* Adjust height for smaller devices */
-        width: 100%;
-        margin: 0.5rem 0;
+    .box a .fa-solid:first-child {
+        margin-left: 0; /* Remove margin from the left of the first icon */
     }
 
-    .container .music-container .box .image {
-        width: 100%;
+    .box a .fa-solid:last-child {
+        margin-right: 0; /* Remove margin from the right of the last icon */
     }
 
-    .container .music-container .box .music {
-        width: 100%;
+    .box a span {
+        flex-grow: 1; /* Allows text to take up remaining space */
+        text-align: center; /* Centers text within the available space */
+        font-size: 3rem;
+        padding: 2rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+
+    .sidebar {
+        height: 100%;
+        width: 99%; /* Adjust width as needed */
+        position: fixed;
+        top: 0;
+        left: -100%; /* Initially hidden */
+        background: rgb(25, 4, 63);
+        color: rgb(230, 179, 12);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transition: left 0.3s ease; /* Smooth slide-in transition */
+        padding: 20px;
+        z-index: 999; /* Ensures sidebar is on top */
+        display: none;
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+    }
+    
+    .sidebar.active {
+        display: block;
+        left: 0; /* Slide in from the left */
+    }
+    
+    .sidebar .closebtn {
+        font-size: 24px;
+        cursor: pointer;
+        display: block;
+        margin-bottom: 20px;
+    }
+    
+    .sidebar p{
+        font-size: 80px;
+        text-align: center;
+    }
+    .content {
+        padding: 20px;
+        align-items: center;
+    }
+    .box1 {
+        height: 100px; /* Adjust height as needed */
+        width:100%;
+        display: flex;
+        cursor: pointer;
+        padding: 10px 20px;
+        background: rgb(25, 4, 63);
+        align-items: center;
+        overflow: hidden; /* Ensures that no content overflows */
     }
 
-    .container .music-container h1 {
-        font-size: 1.5rem;
+    .box1 a {
+        display: flex;
+        align-items: center; /* Vertically center items within the anchor */
+        width: 100%; /* Takes up the full width of the container */
+        text-decoration: none;
+        color: rgb(230, 179, 12); /* Color for text and icons */
     }
 
-    .container .music-container p {
-        font-size: 1rem;
+    .box1 a .fa-solid {
+        font-size: 20px; /* Adjust size if needed */
+        margin: 0 10px; /* Space between icons and text */
     }
-}
+
+    .box1 a .fa-solid:first-child {
+        margin-left: 0; /* Remove margin from the left of the first icon */
+    }
+
+    .box1 a .fa-solid:last-child {
+        margin-right: 0; /* Remove margin from the right of the last icon */
+    }
+    .box1 input{
+        height: 50px;
+        width: 80%;
+        border-radius: 30px;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .tiles-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .tile {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+        width: 150px;
+        text-align: center;
+    }
+    .tile img {
+        max-width: 100%;
+        height: auto;
+    }
+    #search-container {
+        margin-bottom: 20px;
+    }
+    #search-result {
+        height: 100vh;
+        overflow-y: auto; /* Enable vertical scrolling */
+        padding: 10px; /* Optional: Add some padding */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    
+    }
+    
+    #search-result img {
+        height: 17rem;
+        width: 300px;
+        display:flex;
+        align-items:center;
+        background: rgb(25, 4, 63);
+        overflow: hidden;
+        margin: 2rem;
+    }
+    
+    /* Scrollbar Styles for WebKit Browsers */
+    #search-result::-webkit-scrollbar {
+        width: 8px; /* Width of the scrollbar */
+    }
+    
+    #search-result::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Track color */
+        border-radius: 5px; /* Rounded track */
+    }
+    
+    #search-result::-webkit-scrollbar-thumb {
+        background: #888; /* Scrollbar color */
+        border-radius: 5px; /* Rounded scrollbar */
+    }
+    
+    #search-result::-webkit-scrollbar-thumb:hover {
+        background: #555; /* Darker scrollbar on hover */
+    }
