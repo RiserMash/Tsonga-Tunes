@@ -153,12 +153,10 @@ a {
 
 .sidebar {
     position: fixed;
-    top: 70px;
-    right: 425px;
-    height: 100vh;
-    width: 300px;
+    height: 100%;
+    width: 100%;
     z-index: 999;
-    background-color: rgba(255, 255, 255, 0.342);
+    background-color:  rgb(25, 4, 63);;
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
@@ -166,10 +164,12 @@ a {
     align-items: start;
     justify-content: flex-start;
     padding: 10px;
+    color:  rgb(230, 179, 12);
 }
 
 .sidebar li {
     width: 100%;
+    cursor: pointer;
 }
 
 .sidebar a {
@@ -178,6 +178,26 @@ a {
 
 .sidebar.active {
     display: block;
+    left: 0; 
+}
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(25, 4, 63);
+    padding: 10px;
+    border-bottom: 1px solid rgb(25, 4, 63);
+}
+
+.sidebar-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.sidebar-header .fa-x {
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(230, 179, 12);
 }
 
 ul {
@@ -188,151 +208,65 @@ ul {
     margin-right: 10px;
 }
 
-/* Responsive Styles for Max Width 320px */
-@media (max-width: 320px) {
-    .container {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
+.Tracklist {
+    height: 100%;
+    width: 99%; /* Adjust width as needed */
+    position: fixed;
+    top: 0;
+    left: -100%; /* Initially hidden */
+    background:   rgb(25, 4, 63);
+    color: rgb(230, 179, 12);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease; /* Smooth slide-in transition */
+    padding: 20px;
+    z-index: 999; /* Ensures sidebar is on top */
+    display: none;
     flex-direction: column;
-    }
-
-    .music-player {
-        width: 100%;
-        height: 100%; /* Full height */
-        padding: 40px 70px;
-        box-sizing: border-box;
-        overflow: auto; /* Allow scrolling if needed */
-    }
-
-    .song-img {
-        width: 1000px;
-    }
-
-    .music-player h1 {
-        font-size: 18px;
-    }
-
-    .music-player p {
-        font-size: 12px;
-    }
-
-    #progress {
-        width: 90%; /* Adjust width for smaller devices */
-    }
-
-    #progress::-webkit-slider-thumb {
-        width: 25px;
-        height: 25px;
-    }
-
-    #vol {
-        width: 90%; /* Adjust width for smaller devices */
-    }
-
-    #vol::-webkit-slider-thumb {
-        width: 25px;
-        height: 25px;
-    }
-
-    .controls div, .vol div {
-        width: 50px;
-        height: 50px;
-        margin: 10px;
-    }
-
-    .sidebar {
-        width: 250px;
-        right: 10px;
-    }
+    align-items: start;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-/* For Small Devices (Max Width 430px) */
-@media (max-width: 430px) {
-    .container {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .music-player {
-        width: 100vw;
-        height: 100vh; /* Full height */
-        padding: 40px 70px;
-        box-sizing: border-box;
-        overflow: auto; /* Allow scrolling if needed */
-    }
-
-    .song-img {
-        width: 1000px;
-    }
-
-    .music-player h1 {
-        font-size: 18px;
-    }
-
-    .music-player p {
-        font-size: 12px;
-    }
-
-    #progress {
-        width: 90%; /* Adjust width for smaller devices */
-    }
-
-    #progress::-webkit-slider-thumb {
-        width: 25px;
-        height: 25px;
-    }
-
-    #vol {
-        width: 90%; /* Adjust width for smaller devices */
-    }
-
-    #vol::-webkit-slider-thumb {
-        width: 25px;
-        height: 25px;
-    }
-
-    .controls div, .vol div {
-        width: 50px;
-        height: 50px;
-        margin: 10px;
-    }
-
-    .sidebar {
-        width: 250px;
-        right: 10px;
-    }
+.Tracklist.active {
+    display: block;
+    left: 0; /* Slide in from the left */
 }
 
-/* For Medium Devices (Max Width 768px) */
-@media (max-width: 768px) {
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-    }
-
-    .music-player {
-        width: 90%;
-        padding: 25px 35px;
-    }
-
-    .song-img {
-        width: 200px;
-    }
-
-    .music-player h1 {
-        font-size: 22px;
-    }
-
-    .music-player p {
-        font-size: 14px;
-    }
-
-    #progress {
-        width: 80%; /* Adjust width for medium*/
-    }
+.Tracklist .closebtn {
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 20px;
 }
+
+.Tracklist p{
+    font-size: 20px;
+    text-align: center;
+    color:  rgb(230, 179, 12);
+    border-bottom: 2px solid rgb(230, 179, 12); /* Underlined border */
+    padding: 10px 0; /* Optional: add some spacing */
+    cursor: pointer;
+}
+
+.tracklist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(25, 4, 63);
+    padding: 10px;
+    border-bottom: 1px solid rgb(25, 4, 63);
+}
+
+.tracklist-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.tracklist-header .fa-x {
+    cursor: pointer;
+    font-size: 20px;
+    color: rgb(230, 179, 12);
+}
+
+
