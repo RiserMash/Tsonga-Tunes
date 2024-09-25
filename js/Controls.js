@@ -86,6 +86,20 @@ function showSidebar() {
     const sidebar = document.querySelector('.sidebar');
     sidebar.classList.toggle('active');
 }
+function closeSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.remove('active');
+}
+
+function openTracklist() {
+    const Tracklist = document.querySelector('.Tracklist');
+    Tracklist.classList.toggle('active');
+}
+function closeTracklist() {
+    const Tracklist = document.querySelector('.Tracklist');
+    Tracklist.classList.remove('active');
+}
+
 
 function next() {
     currentIndex = (currentIndex + 1) % songs.length;
