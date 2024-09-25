@@ -305,3 +305,121 @@ html{
         }
         
     }
+
+@media only screen and (max-width: 375px) {
+        .container {
+            height: 100%; /* Allows the height to adjust naturally */
+        }
+        
+        .container .heading {
+            font-size: 1.4rem; /* Scaled down for smaller devices */
+        }
+        
+        .container .music-container .box {
+            width: 60%; /* Full width on small screens */
+            height:8rem;
+            margin: 1rem 0; /* Adjust vertical margin for better spacing */
+            overflow: hidden;
+        }
+        
+        .box1 input {
+            width: 90%; /* Slightly wider input */
+        }
+        .container .music-container h1{
+            font-size: 10px;
+            font-weight: 200;
+            color: rgb(230, 179, 12);
+            margin-left: 20px;
+        }
+        .container .music-container {
+            justify-content: center; /* Align items to the start */
+            
+        }
+        .box a span {
+            display:none;
+        }
+        .box a .fa-solid {
+            font-size: 40px; /* Adjust size if needed */
+            margin: 0 30px; /* Space between icons and text */
+        }
+
+        .box1 {
+            height: 100px; /* Adjust height as needed */
+            width:85%;
+            display: flex;
+            cursor: pointer;
+            padding: 10px 20px;
+            background: rgb(25, 4, 63);
+            align-items: center;
+            overflow: hidden; /* Ensures that no content overflows */
+        }
+        #search-result img {
+            height: 10rem;
+            width: 280px;
+            display:flex;
+            align-items:center;
+            background: rgb(25, 4, 63);
+            overflow: hidden;
+            margin: 2rem;
+        }
+        
+    }
+
+    @media only screen and (max-width: 425px) {
+        .container {
+            height: 100%; /* Allows the height to adjust naturally */
+        }
+        
+        .container .heading {
+            font-size: 1.4rem; /* Scaled down for smaller devices */
+        }
+        
+        .container .music-container .box {
+            width: 60%; /* Full width on small screens */
+            height:8rem;
+            margin: 1rem 0; /* Adjust vertical margin for better spacing */
+            overflow: hidden;
+        }
+        
+        .box1 input {
+            width: 90%; /* Slightly wider input */
+        }
+        .container .music-container h1{
+            font-size: 10px;
+            font-weight: 200;
+            color: rgb(230, 179, 12);
+            margin-left: 20px;
+        }
+        .container .music-container {
+            justify-content: center; /* Align items to the start */
+            
+        }
+        .box a span {
+            display:none;
+        }
+        .box a .fa-solid {
+            font-size: 60px; /* Adjust size if needed */
+            margin: 0 30px; /* Space between icons and text */
+        }
+
+        .box1 {
+            height: 100px; /* Adjust height as needed */
+            width:85%;
+            display: flex;
+            cursor: pointer;
+            padding: 10px 20px;
+            background: rgb(25, 4, 63);
+            align-items: center;
+            overflow: hidden; /* Ensures that no content overflows */
+        }
+        #search-result img {
+            height: 10rem;
+            width: 280px;
+            display:flex;
+            align-items:center;
+            background: rgb(25, 4, 63);
+            overflow: hidden;
+            margin: 2rem;
+        }
+        
+    }
