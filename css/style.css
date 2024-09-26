@@ -27,8 +27,9 @@
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between items */
     margin-bottom: 30px;
+    padding: 0 20px; /* Optional: add some padding to the nav */
 }
 
 nav .circle {
@@ -268,5 +269,82 @@ ul {
     font-size: 20px;
     color: rgb(230, 179, 12);
 }
+@media only screen and (max-width: 320px){
 
+}
+@media only screen and (max-width: 375px){
 
+}
+@media only screen and (max-width: 430px){
+
+}
+@media only screen and (max-width: 600px){
+
+}
+@media only screen and (max-width: 1260px){
+    nav {
+        display: flex;
+        justify-content: space-between; /* Space between items */
+        margin-bottom: 30px;
+        padding: 0 20px; /* Optional: add some padding to the nav */
+    }   
+    .music-player{
+            height:100vh;
+        }
+        nav .circle{
+            width: 200px;
+            height: 200px;
+            justify-content: space-between;
+            box-shadow:0 0px 0px  rgb(230, 179, 12);
+            background:rgb(230, 179, 12);
+        }
+        nav .circle .fa-solid{
+            font-size: 100px;
+        }
+        .controls div {
+            width: 200px;
+            height: 200px;
+        }
+        .controls .fa-solid{
+            font-size: 100px
+        }
+        .song-img {
+            border-radius: 0;
+            width: 90%;
+            height: 60%;
+        }
+
+        #progress {
+            height: 18px;
+        }
+
+        #progress::-webkit-slider-thumb {
+            width: 90px;
+            height: 90px;
+            border: 24px solid #fff;
+        }
+
+        #vol {
+            width: 600px;
+            height: 18px;  
+        }
+        #vol::-webkit-slider-thumb {
+            width: 90px;
+            height: 90px;
+            border: 24px solid #fff;
+        }
+        .vol div {
+            width: 160px;
+            height:160px
+        }
+        .vol .fa-solid{
+            font-size: 80px;
+        }
+
+        .music-player p {
+            font-size: 72px;
+        }
+        .music-player h1 {
+            font-size: 100px;
+        }
+}
