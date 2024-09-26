@@ -290,6 +290,7 @@ ul {
     }   
     .music-player{
             height:100vh;
+            width: 100vw;
         }
         nav .circle{
             width: 200px;
