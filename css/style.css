@@ -286,7 +286,6 @@ ul {
         display: flex;
         justify-content: space-between; /* Space between items */
         margin-bottom: 0px;
-        padding: 0 20px; /* Optional: add some padding to the nav */
     }
     .container{
         height:2800px;
