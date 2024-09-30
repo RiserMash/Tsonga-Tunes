@@ -286,7 +286,7 @@ ul {
         display: flex;
         justify-content: space-between; /* Space between items */
         margin-bottom: 0px;
-		over-flow: hidden;
+	
     }
     .container{
         height:2800px;
