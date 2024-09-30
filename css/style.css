@@ -156,6 +156,7 @@ a {
     position: fixed;
     height: 100%;
     width: 100%;
+    top:0;
     z-index: 999;
     background-color:  rgb(25, 4, 63);;
     backdrop-filter: blur(10px);
@@ -283,32 +284,28 @@ ul {
 }
 @media only screen and (max-width: 1260px){
     nav {
-    display: flex; /* Enable flexbox */
-    justify-content: space-between; /* Space circles to the far ends */
-    align-items: center; /* Center vertically */
-    padding: 20px; /* Add padding around the nav */
-}
-nav .circle{
-        width: 200px;
-        height: 200px;
-        justify-content: space-between;
-	display: flex;
-	align-items: center;
-        box-shadow:0 0px 0px  rgb(230, 179, 12);
-        background:rgb(230, 179, 12);
-}
-nav .circle .fa-solid{
-            font-size: 100px;
-}
-.container{
+        display: flex;
+        justify-content: space-between; /* Space between items */
+        top:0;
+    }
+    .container{
         height:2800px;
         width: 1260px;
-}   
+    }   
     .music-player{
             height:2800px;
             width: 1260px;
         }
-        
+        nav .circle{
+            width: 200px;
+            height: 200px;
+            justify-content: space-between;
+            box-shadow:0 0px 0px  rgb(230, 179, 12);
+            background:rgb(230, 179, 12);
+        }
+        nav .circle .fa-solid{
+            font-size: 100px;
+        }
         .controls div {
             width: 200px;
             height: 200px;
@@ -319,7 +316,7 @@ nav .circle .fa-solid{
         .song-img {
             border-radius: 0;
             width: 90%;
-            height: 60%;
+            height: 30%;
         }
 
         #progress {
@@ -354,5 +351,29 @@ nav .circle .fa-solid{
         }
         .music-player h1 {
             font-size: 100px;
+        }
+
+        .sidebar-header h2 {
+            margin: 0;
+            font-size: 72px;
+        }
+        .sidebar li {
+            font-size: 72px;
+            padding: 40px 20px;
+            border-bottom: 2px solid rgb(230, 179, 12); /* Underlined border */
+        }
+        ul{
+            padding: 0 10px;
+        }
+
+        .tracklist-header h2 {
+            font-size: 72px;
+        }
+        .tracklist-header .fa-x {
+            font-size:72px;
+        }
+        .Tracklist p{
+            font-size: 82px;
+            padding: 40px 20px;
         }
 }
