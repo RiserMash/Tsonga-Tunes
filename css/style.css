@@ -283,29 +283,32 @@ ul {
 }
 @media only screen and (max-width: 1260px){
     nav {
-        display: flex;
-        justify-content: space-between; /* Space between items */
-        margin-bottom: 0px;
-	
-    }
-    .container{
+    display: flex; /* Enable flexbox */
+    justify-content: space-between; /* Space circles to the far ends */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Add padding around the nav */
+}
+nav .circle{
+        width: 200px;
+        height: 200px;
+        justify-content: space-between;
+	display: flex;
+	align-items: center;
+        box-shadow:0 0px 0px  rgb(230, 179, 12);
+        background:rgb(230, 179, 12);
+}
+nav .circle .fa-solid{
+            font-size: 100px;
+}
+.container{
         height:2800px;
         width: 1400px;
-    }   
+}   
     .music-player{
             height:2800px;
             width: 1260px;
         }
-        nav .circle{
-            width: 200px;
-            height: 200px;
-            justify-content: space-between;
-            box-shadow:0 0px 0px  rgb(230, 179, 12);
-            background:rgb(230, 179, 12);
-        }
-        nav .circle .fa-solid{
-            font-size: 100px;
-        }
+        
         .controls div {
             width: 200px;
             height: 200px;
@@ -316,7 +319,7 @@ ul {
         .song-img {
             border-radius: 0;
             width: 90%;
-            height: 1120px;
+            height: 60%;
         }
 
         #progress {
