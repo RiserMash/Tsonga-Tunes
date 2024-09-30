@@ -285,7 +285,7 @@ ul {
     nav {
         display: flex;
         justify-content: space-between; /* Space between items */
-        margin-bottom: 30px;
+        margin-bottom: 0px;
         padding: 0 20px; /* Optional: add some padding to the nav */
     }
     .container{
@@ -316,7 +316,7 @@ ul {
         .song-img {
             border-radius: 0;
             width: 90%;
-            height: 30%;
+            height: 1120px;
         }
 
         #progress {
